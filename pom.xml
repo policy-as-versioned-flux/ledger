@@ -5,7 +5,7 @@
   <version>0.1.0</version>
   <packaging>jar</packaging>
 
-  <!-- Ticket 08 (real-estate): the laggard team, deliberately -- a genuine,
+  <!-- Ticket 08 (real-estate): the laggard team, deliberately: a genuine,
        resolvable Log4Shell-era log4j-core dependency (CVE-2021-44228),
        real signal for the vulnerability scanner, correlated with this
        team's old policy version (1.0.0). -->
