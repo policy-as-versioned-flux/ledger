@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ledger
+  namespace: default
+  labels:
+    mycompany.com/policy-version: "1.0.0"
+    department: finance
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ledger
+  template:
+    metadata:
+      labels:
+        app: ledger
+        mycompany.com/policy-version: "1.0.0"
+        department: finance
+    spec:
+      containers:
+        - name: ledger
+          image: ghcr.io/policy-as-versioned-flux/ledger@sha256:9709e1075a503fe59ca85deae2b748fcbbfd80b464e56d2e1f82ec8182268111 # v1.0.0
+          ports:
+            - containerPort: 8080
